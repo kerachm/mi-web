@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Web Bonita</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(120deg, #667eea, #764ba2);
+      color: white;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 40px;
+      width: 380px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+
+    .skills, .links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .skill, .link {
+      background: rgba(255,255,255,0.25);
+      padding: 12px 20px;
+      border-radius: 30px;
+      transition: 0.3s;
+      text-decoration: none;
+      color: white;
+    }
+
+    .skill:hover, .link:hover {
+      transform: translateY(-5px) scale(1.05);
+      background: white;
+      color: #764ba2;
+    }
+
+    button {
+      background: white;
+      color: #764ba2;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section id="inicio">
+    <div class="card">
+      <h1>Hola 👋</h1>
+      <p>Bienvenido a mi página web interactiva</p>
+
+      <div class="skills">
+        <div class="skill">Python</div>
+        <div class="skill">Java</div>
+        <div class="skill">HTML</div>
+      </div>
+
+      <a href="#contacto"><button>Contáctame ↓</button></a>
+    </div>
+  </section>
+
+  <!-- CONTACTO / LINKS -->
+  <section id="contacto">
+    <div class="card">
+      <h2>Contacto & Juegos 🎮</h2>
+      <p>Visita mis sitios favoritos</p>
+
+      <div class="links">
+        <a class="link" href="https://www.youtube.com" target="_blank">YouTube</a>
+        <a class="link" href="https://poki.com" target="_blank">Poki (Juegos)</a>
+      </div>
+
+      <a href="#tutoriales"><button>Ver tutoriales ↓</button></a>
+    </div>
+  </section>
+
+  <!-- TUTORIALES -->
+  <section id="tutoriales">
+    <div class="card">
+      <h2>Tutoriales 📚</h2>
+      <p>Aprende programación desde cero</p>
+
+      <div class="links">
+        <a class="link" href="https://www.youtube.com/results?search_query=tutorial+python" target="_blank">Python</a>
+        <a class="link" href="https://www.youtube.com/results?search_query=tutorial+html+css" target="_blank">HTML & CSS</a>
+        <a class="link" href="https://www.youtube.com/results?search_query=tutorial+java" target="_blank">Java</a>
+      </div>
+
+      <a href="#inicio"><button>Volver arriba ↑</button></a>
+    </div>
+  </section>
+
+</body>
+</html>
