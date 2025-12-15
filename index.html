@@ -36,13 +36,22 @@
       position: relative;
     }
 
+    /* ROW DE CARDS */
+    .cards-row {
+      display: flex;
+      gap: 50px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+
     /* GLASS CARD */
     .card {
       background: rgba(255, 255, 255, 0.12);
       backdrop-filter: blur(18px);
       border-radius: 30px;
       padding: 70px;
-      max-width: 850px;
+      max-width: 420px;
       width: 100%;
       text-align: center;
       box-shadow: 0 30px 80px rgba(0,0,0,0.55);
@@ -76,7 +85,7 @@
       font-size: 1.25rem;
       line-height: 1.6;
       opacity: 0.85;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
     /* LINKS */
@@ -84,77 +93,39 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 30px;
+      gap: 20px;
     }
 
     .link {
-  padding: 18px 44px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.1));
-  text-decoration: none;
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow:
-    inset 0 0 0 1px rgba(255,255,255,0.25),
-    0 14px 35px rgba(0,0,0,0.45);
-}
-
-.link:hover {
-  background: linear-gradient(135deg, #ffffff, #e9e7ff);
-  color: #1f1c2c;
-  transform: translateY(-6px) scale(1.06);
-  box-shadow: 0 22px 55px rgba(0,0,0,0.6);
-}
-
-.link:active {
-  transform: translateY(-2px) scale(0.98);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-}
-
-    .link {
-  padding: 18px 44px;
-  border-radius: 999px;
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.28),
-    rgba(255,255,255,0.12)
-  );
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow:
-    inset 0 0 0 1px rgba(255,255,255,0.25),
-    0 14px 35px rgba(0,0,0,0.45);
-}
-
-.link:hover {
-  background: linear-gradient(135deg, #ffffff, #eae7ff);
-  color: #1f1c2c;
-  transform: translateY(-6px) scale(1.06);
-  box-shadow: 0 22px 55px rgba(0,0,0,0.6);
-}
-
-.link:active {
-  transform: translateY(-2px) scale(0.98);
-}
-
+      padding: 18px 44px;
+      border-radius: 999px;
+      background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.28),
+        rgba(255,255,255,0.12)
+      );
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.25),
+        0 14px 35px rgba(0,0,0,0.45);
+    }
 
     .link:hover {
-      transform: translateY(-8px) scale(1.08);
-      background: white;
+      background: linear-gradient(135deg, #ffffff, #eae7ff);
       color: #1f1c2c;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      transform: translateY(-6px) scale(1.06);
+      box-shadow: 0 22px 55px rgba(0,0,0,0.6);
+    }
+
+    .link:active {
+      transform: translateY(-2px) scale(0.98);
     }
 
     /* FLOATING SHAPES */
@@ -189,6 +160,7 @@
 </head>
 <body>
 
+  <!-- HERO -->
   <section>
     <div class="card">
       <h1>Mi Web</h1>
@@ -198,7 +170,6 @@
         <a class="link" href="https://www.youtube.com" target="_blank">▶️ YouTube</a>
         <a class="link" href="https://tiktok.com" target="_blank">▶️ Tiktok</a>
         <a class="link" href="https://instagram.com" target="_blank">📸 Instagram</a>
-
       </div>
     </div>
 
@@ -207,14 +178,31 @@
     <div class="shape shape3"></div>
   </section>
 
+  <!-- JUEGOS + IA -->
   <section>
-    <div class="card">
-      <h2>Juega Online</h2>
-      <p>Diviertete Gordito.</p>
-      <a class="link" href="https://poki.com" target="_blank">Ir a Poki</a>
-      <a class="link" href="https://crazygames.com" target="_blank">Ir a 1001 juegos</a>
-      <a class="link" href="https://friv.com" target="_blank">Ir a Friv</a>
-        
+    <div class="cards-row">
+
+      <div class="card">
+        <h2>🎮 Juega Online</h2>
+        <p>Diviértete Gordito.</p>
+
+        <div class="links">
+          <a class="link" href="https://poki.com" target="_blank">Poki</a>
+          <a class="link" href="https://crazygames.com" target="_blank">CrazyGames</a>
+          <a class="link" href="https://friv.com" target="_blank">Friv</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>🤖 IA</h2>
+        <p>Aqui te dejo IA por si tienes preguntas tontito.</p>
+
+        <div class="links">
+          <a class="link" href="https://chat.openai.com" target="_blank">ChatGPT</a>
+          <a class="link" href="https://www.perplexity.ai" target="_blank">Perplexity</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -236,6 +224,7 @@
 
 </body>
 </html>
+
 
 
 
