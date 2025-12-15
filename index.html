@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi Web</title>
+  <title>Mi Web </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -128,27 +128,13 @@
       50% { transform: translateY(-50px) rotate(180deg); }
     }
 
-   @keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-50px) rotate(180deg);
-  }
-}
-
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+      50% { transform: translateY(-40px) rotate(180deg); }
+    }
 
     iframe {
       width: 100%;
@@ -158,19 +144,38 @@
       margin-top: 30px;
     }
 
+      
+    /* SCROLL ANIMATION */
+    .reveal {
+      opacity: 0;
+      transform: translateY(80px);
+      transition: all 1s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* PARALLAX EFFECT */
+    .parallax {
+      transform: translateY(0);
+      transition: transform 0.1s linear;
+    }
+
   </style>
 </head>
 <body>
 
   <!-- HERO -->
-  <section id="inicio">
-    <div class="card">
-      <h1>Mi Web Para Gilipollas</h1>
-      <p>Una web para los gilipollas que no tengan ganas de estudiar VAGOS</p>
+  <section id="inicio" class="parallax">
+    <div class="card reveal">
+      <h1>Mi Web para Gilipollas</h1>
+      <p>Una web para gilipollas que no quieren estudiar putos VAGOS</p>
 
       <div class="links">
         <a class="link" href="https://www.youtube.com" target="_blank">YouTube</a>
-        <a class="link" href="https://poki.com" target="_blank">Poki (Juegos)</a>
+        <a class="link" href="https://poki.com" target="_blank">Poki</a>
         <a class="link" href="https://instagram.com" target="_blank">Insta</a>
       </div>
     </div>
@@ -179,15 +184,45 @@
     <div class="shape shape3"></div>
   </section>
 
+
   <!-- JUEGOS -->
-  <section id="juegos">
-    <div class="card">
+  <section id="juegos" class="parallax">
+    <div class="card reveal">
       <h2>Juega Online</h2>
       <p>Diviértete Gordito</p>
       <a class="link" href="https://poki.com" target="_blank">Ir a Poki</a>
-      <a class="link" href="https://crazy.com" target="_blank">Ir a 1001 juegos</a>
+      <a class="link" href="https://crazygames.com" target="_blank">Ir a 1001 juegos</a>
     </div>
   </section>
+
+  
+<script>
+  // REVEAL ON SCROLL
+  const reveals = document.querySelectorAll('.reveal');
+
+  function revealOnScroll() {
+    reveals.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const revealPoint = 150;
+
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+
+  // PARALLAX EFFECT
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('.parallax').forEach(section => {
+      const speed = 0.3;
+      section.style.transform = `translateY(${window.scrollY * speed}px)`;
+    });
+  });
+</script>
 
 </body>
 </html>
