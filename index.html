@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Pagina Web De Iker</title>
+  <title>Mi Web</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -15,7 +15,9 @@
     }
 
     body {
-      background: #1a1a1a;
+      background: linear-gradient(135deg, #2b1055, #7597de, #fbc8d4);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
       color: white;
       overflow-x: hidden;
     }
@@ -25,9 +27,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
       position: relative;
       overflow: hidden;
+      background-attachment: fixed;
     }
 
     .card {
@@ -122,8 +125,30 @@
 
     @keyframes float {
       0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-40px) rotate(180deg); }
+      50% { transform: translateY(-50px) rotate(180deg); }
     }
+
+   @keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-50px) rotate(180deg);
+  }
+}
+
 
     iframe {
       width: 100%;
@@ -140,8 +165,8 @@
   <!-- HERO -->
   <section id="inicio">
     <div class="card">
-      <h1>Pagina Web Para Gilipollas</h1>
-      <p>Una web para hacer el subnormal en vez de estudiar VAGO</p>
+      <h1>Mi Web Para Gilipollas</h1>
+      <p>Una web para los gilipollas que no tengan ganas de estudiar VAGOS</p>
 
       <div class="links">
         <a class="link" href="https://www.youtube.com" target="_blank">YouTube</a>
@@ -154,18 +179,16 @@
     <div class="shape shape3"></div>
   </section>
 
-
-
   <!-- JUEGOS -->
   <section id="juegos">
     <div class="card">
-      <h2>Juega Online si la clase es aburrida</h2>
+      <h2>Juega Online</h2>
       <p>Diviértete Gordito</p>
       <a class="link" href="https://poki.com" target="_blank">Ir a Poki</a>
-      <a class="link" href="https://crazygames.com" target="_blank">Ir a 1001 juegos</a>
-
+      <a class="link" href="https://crazy.com" target="_blank">Ir a 1001 juegos</a>
     </div>
   </section>
 
 </body>
 </html>
+
